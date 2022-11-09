@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 즉시실행 함수
+        // (function () {
+        //     var myAge = 30;
+        // })();
+
+        // document.write(myAge); // Error
+        
+        // 어떤 함수의 값을 실행할 때 변수에 담아서 출력하면 출력이된다. 
+        // var result = (function(){
+        //     var myAge = 30;
+        //     return myAge;
+        // })();
+
+        // document.write(result); // 30
+
+        // 매개 변수가 있는 함수
+        // var result = (function (num1, num2) {
+        //                     return num1 + num2;
+        //                 })(10, 20);
+
+        // document.write(result);
+        // 즉시실행함수 화살표함수 
+        // ((num1, num2) => num1 + num2)(10, 20);
+          var result = ((num1, num2) => num1 + num2)(10 ,20);
+          document.write(result);
+
+
+    </script>
+</body>
+</html>

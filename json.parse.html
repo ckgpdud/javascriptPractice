@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var jsonData = {
+            "name" : "차혜영",
+            "age" : 27,
+            "gender" : "여",
+            "interests": ["먹기", "마시기"],
+            "family" : {"father": "홍두길", "mom" : "김연심"},
+            "school" : null,
+            "gradutate": true
+        };
+
+        // var jsData = JSON.parse(jsonData); // json 객체 --> 자바스크립트 객체
+    
+
+        var jsData = JSON.stringify(jsData); // 자바스크립트 객체 -> json객체
+        console.log(jsData); // json 객체의 타입은 문자열 타입
+    </script>
+</body>
+</html>

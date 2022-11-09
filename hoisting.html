@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 호이스팅
+//          document.write(num1); // 10이 아니라 undefined 출력
+//          var num1 = 10;
+//   // 밑의 코드가 위의 코드와 같다. 호이스팅은 변수만 위로 끌어올려지기 때문
+//          // var num1;
+//          // document.write(num1);
+//          // num1 = 10;
+        // TDZ : Temporal Dead Zone 일시적 사각지대
+        // 변수는 존재하지만 초기화 및 할당 안됨
+        // document.write(num1); // Error
+        // document.write(num2); // Error
+        // let num1;
+        // const num2 = 20;
+
+        document.write(sum(10, 20));
+
+        function sum(num1, num2){
+            return num1 + num2;
+        }
+        
+        // 함수 호이스팅 (위의 코드와 같다)
+        // function sum(num1, num2){
+        //    return num1 + num2;
+        // }
+        // document.write(sum(10,20));
+
+    </script>
+</body>
+</html>

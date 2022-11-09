@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 내부함수
+    // this는 전역객체에 바인딩이 된다,(자바스크립트는 window)
+            function sFoo(){
+            console.log("sFoo ::: " + this);
+        }
+
+        function mFoo(){
+            console.log("mFoo ::: " + this);
+            sFoo();
+        }
+
+        mFoo();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var str = "전역스코프";
+        // let str = "전역스코프";
+        const str = "전역스코프";
+
+        function fnScopeTest(){
+            // var str = "지역스코프";
+            // let str = "지역스코프";
+            const str = "지역스코프";
+
+            console.log(str);
+            // var, let, const 모두 함수스코프에 대해 유효한 범위를 지닌다.
+            // var : 함수안에서 출력하면 함수 안에 있는 지역스코프 출력, 함수 밖에서 츨력하면 젼역스코프 출력
+            // let : let도 var와 마찬가지이다.
+            // const : 마찬가지이다. 
+        }
+        console.log(str);
+        fnScopeTest();
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Info 생성자 함수
+        function Info() {
+            this.name = name;
+            this.age = age;
+        }
+        // 프로토 타입 생성 
+        //생성자함수,prototype.함수이름
+        Info.prototype.write = function(){
+            console.log("이름은\'"+this.name+"\',나이는 \'"+this.age+"살\' 입니다.");
+        }
+        //  생성자함수 new 연산자 이용
+        var info1 = new Array("홍길원", 30);
+        var info2 = new Array("홍길투", 31);
+        var info3 = new Array("홍길삼", 32);
+
+        info1.write();
+        info2.write();
+        info3.write();
+
+        // 각 info1, info2, info3에 대한 정보 출력
+        console.log(info1);
+        console.log(info2);
+        console.log(info3);
+        
+    </script>
+</body>
+</html>

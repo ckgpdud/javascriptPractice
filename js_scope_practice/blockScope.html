@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str = "전역 스코프"; 
+
+    function scopeTest() {
+        var str = "지역 스코프2"; // 재선언 및 재할당
+        var str2 = "지역 스코프";
+        console.log(str);
+        console.log(str2);
+    }
+    console.log(str); // 전역 스코프
+    // console.log(str2);
+
+    function scopeTest2() {
+        console.log(str2); // 정의되어 있지 않는다는 오류 발생
+    }
+
+    scopeTest();
+    scopeTest2();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 웹 브라우저에서는 window 객체가 전역 객체
+        // console.log(this === window); // true
+
+        // a = 37;
+        // console.log(window.a); // 37
+
+        // this.b = "MDN";
+        // console.log(window.b); // "MDN"
+        // console.log(b); // "MDN"
+        // window.a = 20;
+
+        // function foo() {
+        //     this.b = 30;
+        //     console.log(this.b); // 30
+        // }
+
+        // foo(); // 30
+        // console.log(this.b); // undefined
+        // window.str = "window";
+        
+        // function foo() {
+        //     console.log(this === obj);
+        //     console.log(this.str);
+        // }
+
+        // var obj = {
+        //     str : 10,
+        //     fn : foo // foo함수 참조
+        // }
+
+        // obj.fn(); // 암시적 바인딩
+        // foo(); // 기본 바인딩
+
+        
+        // apply를 이용한 명시적 바인딩
+
+        // function foo(str2) {
+            // console.log(this === obj); // true
+            //console.log(this.str1, str2); 
+        //     return this.str1+str2; // 명시적 바인딩 + apply 실습하기
+        // }
+
+        // var obj = {
+        //     str1: "명시적 바인딩"
+        // };
+
+        // var bindingFn = function(){
+        //     //console.log(arguments);
+        //     return foo.apply(obj.arguments); // arguments가 하나만 호출되어서 맨 앞에 있는 것만 호출
+        // };
+
+        // console.log(bindingFn("apply 실습하기", "1")); // 명시적 바인딩 apply 실습하기
+       // 화살표 함수 실습하기
+        function foo() {
+                //console.log(str);
+                return (str) => {
+                    console.log(this.str); // 화살표 함수 바인딩 실습
+                };
+        }
+
+        var obj1 = {
+                str: "화살표 함수 바인딩 실습"
+        };
+
+        var obj2 = {
+                str: "화살표 함수 재바인딩 실습"
+        };
+
+        // 명시적 바인딩 call
+        var temp = foo.call(obj1); // 화살표 함수 바인딩 실습
+        temp.call(obj2); // 재바인딩 안됨
+   </script>
+</body>
+</html>
