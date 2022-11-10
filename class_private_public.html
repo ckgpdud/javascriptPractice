@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 클래스 생성
+        class Info{
+            #privateValue = "홍길순";
+            publicValue = "50kg";
+        }
+        // 클래스 사용
+        let info = new Info();// (인스턴스 라고 부른다.)
+        console.log(info.privateValue); // error --> 외부에서 접근 불가능
+        console.log(info.pulblicValue); // "50kg"
+    </script>
+</body>
+</html>

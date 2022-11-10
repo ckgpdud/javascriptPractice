@@ -1,0 +1,44 @@
+<!-- 클래스란 -->
+<!-- 객체를 생성하기 위한 틀, 객체는 아님 -->
+
+<!-- 클래스 사용방법 -->
+<!-- class Info {
+    생성자
+    constructor(){...}
+
+    함수
+    method1(){}
+    method2(){}
+    method3(){}
+}
+
+let info = new Info(); -->
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 붕어빵을 찍어내는 기계(class 생성)
+        // class 클래스명(맨앞에 대문자) {//생성자 //관련함수}
+        class Info{
+            constructor({name, age}) {
+                this.name = name;
+                this.age = age;
+            }
+
+            write(){
+                return `이름은 ${this.name},나이는 ${this.age}살`;
+            }
+        }
+        // 2. 붕어빵(class 사용)
+        let info = new Info({name:"홍길원", age: 30});
+        console.log(info.write()); // 함수호출 // 이름은 홍길원,나이는 30살
+    </script>
+</body>
+</html>
