@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 상속 실습하기 -->
+    <script>
+        // 클래스 생성
+        class Calc {
+            // 생성자 함수
+            constructor(num1, num2){
+                this.num1 = num1;
+                this.num2 = num2;
+                this.result = 0;
+            }
+            //더하기 함수
+            sum(){
+                this.result = this.num1 + this.num2
+                return this.result;
+            }
+            // 빼기 함수
+            subs(){
+                if(this.num1 >= this.num2){
+                    this.result = this.num1 - this.num2;
+                } else {
+                    this.result = this.num2 - this.num1;
+                }
+
+                // 위의 조건문을 삼항 연산자로 바꿔보기
+                // this.result = ((his.num1 >= this.num2) ? this.num1 - this.num2 : this.num2 - this.num1);
+                return this.result;
+            }
+
+            write(){
+                return this.result;
+            }
+        }
+        // Result = Calc함수를 상속받다.
+        class Result extends Calc {
+            sum(){
+                super.sum();  // super 키워드는 부모 오브젝트의 함수를 호출할 때 사용됩니다.
+            }
+            subs(){
+                super.subs();
+            }
+
+            // 메소드 오버라이딩
+            write(){
+                return "결과는??"+this.result;
+            }
+        }
+    </script>
+</body>
+</html>

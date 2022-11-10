@@ -1,0 +1,32 @@
+<!-- 정적 메서드 static -->
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Info {
+            // 정적 변수 선언
+            static interests = ["dance", "game"];
+            // 생성자
+            constructor({name, age}) {
+                this.name = name;
+                this.age = age;
+            }
+
+            static interestWrite(){
+                // console.log(interests[0]);
+                console.log(Info.interests[0]);
+            }
+        }
+
+        let info = new Info({name:"홍길원", age: 31});
+        // info.interestWrite();
+        Info.interestWrite(); //dance
+    </script>
+</body>
+</html>
